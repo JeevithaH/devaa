@@ -115,10 +115,10 @@ export default function App() {
     </div>
 
     <div className="background-gallery">
-        <img src="temp/download (6).jpeg" className="bg-img float-2" alt="decor" />
-        <img src="temp/download (7).jpeg" className="bg-img float-3" alt="decor" />
-        <img src="temp/download (12).jpeg" className="bg-img float-4" alt="decor" />
-        <img src="temp/Haldi decor inspo.jpeg" className="bg-img float-5" alt="decor" />
+        <img src="temp/img6.jpeg" className="bg-img float-2" alt="decor" />
+        <img src="temp/img7.jpeg" className="bg-img float-3" alt="decor" />
+        <img src="temp/img3.jpeg" className="bg-img float-4" alt="decor" />
+        <img src="temp/img11.jpeg" className="bg-img float-5" alt="decor" />
     </div>
 
     <div className="noise-overlay"></div>
@@ -141,7 +141,7 @@ export default function App() {
             
             <div className="polaroid-video curvy-medium has-overlay">
                 <video autoplay loop muted playsinline>
-                    <source src="temp/Screen Recording 2026-09-27 213919.mp4" type="video/mp4" />
+                    <source src="temp/img13.mp4" type="video/mp4" />
                     Your browser does not support HTML5 video.
                 </video>
                 <div className="video-overlay">
@@ -165,7 +165,7 @@ export default function App() {
 
     
     <section id="mehendi" className="section">
-        <img src="temp\download (8).jpeg" className="side-polaroid left-polaroid" data-aos="fade-right" alt="mehendi inspo" />
+        <img src="temp/img8.jpeg" className="side-polaroid left-polaroid" data-aos="fade-right" alt="mehendi inspo" />
         <div className="glass-card curvy-large theme-sage" data-aos="fade-up" data-aos-duration="1500">
             <h2 className="section-title font-script">
                 <span className="lang en">Mehendi</span>
@@ -198,7 +198,7 @@ export default function App() {
 
                 <div className="qr-container curvy-medium">
                     <a href="https://maps.google.com/?q=The+Green+Gardens,Bangalore" target="_blank" className="qr-link">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com/?q=The+Green+Gardens,Bangalore" alt="Location QR Code" className="qr-code" />
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://maps.google.com/?q=The+Green+Gardens,Bangalore" alt="Location QR Code" className="qr-code" />
                     </a>
                     <p className="qr-instruction">
                         <span className="lang en">Scan or Click for Location</span>
@@ -211,7 +211,7 @@ export default function App() {
 
     
     <section id="arisina" className="section">
-        <img src="temp/download (9).jpeg" className="side-polaroid right-polaroid" data-aos="fade-left" alt="haldi inspo" />
+        <img src="temp/img9.jpeg" className="side-polaroid right-polaroid" data-aos="fade-left" alt="haldi inspo" />
         <div className="glass-card curvy-large theme-butter" data-aos="fade-up" data-aos-duration="1500">
             <h2 className="section-title font-script">
                 <span className="lang en">Arisina</span>
@@ -244,7 +244,7 @@ export default function App() {
                 
                 <div className="qr-container curvy-medium">
                     <a href="https://maps.google.com/?q=Bangalore" target="_blank" className="qr-link">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com/?q=Bangalore" alt="Location QR Code" className="qr-code" />
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://maps.google.com/?q=Bangalore" alt="Location QR Code" className="qr-code" />
                     </a>
                     <p className="qr-instruction">
                         <span className="lang en">Scan or Click for Location</span>
@@ -257,7 +257,7 @@ export default function App() {
 
     
     <section id="reception" className="section">
-        <img src="temp/download (11).jpeg" className="side-polaroid left-polaroid" data-aos="fade-right" alt="reception inspo" />
+        <img src="temp/img2.jpeg" className="side-polaroid left-polaroid" data-aos="fade-right" alt="reception inspo" />
         <div className="glass-card curvy-large theme-apricot" data-aos="fade-up" data-aos-duration="1500">
             <h2 className="section-title font-script">
                 <span className="lang en">Reception</span>
@@ -290,7 +290,7 @@ export default function App() {
 
                 <div className="qr-container curvy-medium">
                     <a href="https://www.bing.com/maps/directions?ty=0&amp;v=2&amp;sV=1&amp;style=r&amp;rtp=%7Epos.13.012762069702148_77.5858154296875__Palace%2520Ground_&amp;cp=13.012762%7E77.585815&amp;lvl=16" target="_blank" className="qr-link">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https%3A%2F%2Fwww.bing.com%2Fmaps%2Fdirections%3Fty%3D0%26v%3D2%26sV%3D1%26style%3Dr%26rtp%3D%257Epos.13.012762069702148_77.5858154296875__Palace%252520Ground_%26cp%3D13.012762%257E77.585815%26lvl%3D16" alt="Location QR Code" className="qr-code" />
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&amp;data=https%3A%2F%2Fwww.bing.com%2Fmaps%2Fdirections%3Fty%3D0%26v%3D2%26sV%3D1%26style%3Dr%26rtp%3D%257Epos.13.012762069702148_77.5858154296875__Palace%252520Ground_%26cp%3D13.012762%257E77.585815%26lvl%3D16" alt="Location QR Code" className="qr-code" />
                     </a>
                     <p className="qr-instruction">
                         <span className="lang en">Scan or Click for Location</span>
@@ -303,7 +303,7 @@ export default function App() {
 
     
     <section id="muhurtha" className="section">
-        <img src="temp/Telugu wedding mandap.jpeg" className="side-polaroid right-polaroid" data-aos="fade-left" alt="muhurtha inspo" />
+        <img src="temp/img14.jpeg" className="side-polaroid right-polaroid" data-aos="fade-left" alt="muhurtha inspo" />
         <div className="glass-card curvy-huge theme-muhurtha" data-aos="zoom-in" data-aos-duration="2000">
             <h2 className="section-title font-script">
                 <span className="lang en">Muhurtha</span>
@@ -336,7 +336,7 @@ export default function App() {
 
                 <div className="qr-container curvy-medium">
                     <a href="https://maps.google.com/?q=Sri+Kalyana+Mantapa,Bangalore" target="_blank" className="qr-link">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com/?q=Sri+Kalyana+Mantapa,Bangalore" alt="Location QR Code" className="qr-code" />
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://maps.google.com/?q=Sri+Kalyana+Mantapa,Bangalore" alt="Location QR Code" className="qr-code" />
                     </a>
                     <p className="qr-instruction">
                         <span className="lang en">Scan or Click for Location</span>
