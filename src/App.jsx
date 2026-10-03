@@ -88,13 +88,13 @@ export default function App() {
     <>
       
 
-    <!-- Language Toggle -->
+    
     <div className="lang-toggle">
         <button id="btn-en" className="active">EN</button>
         <button id="btn-kn">ಕನ್ನಡ</button>
     </div>
 
-    <!-- Draggable Anime Faceless Couple Stickers (Interactive) -->
+    
     <div className="sticker draggable sticker-1">
         <svg viewBox="0 0 200 200" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
             <path d="M60 40 Q80 20 100 40 L100 70 Q100 90 80 90 Q60 90 60 70 Z" fill="#2c3e50"/>
@@ -135,7 +135,7 @@ export default function App() {
 
     <div id="falling-flowers"></div>
 
-    <!-- Home Section -->
+    
     <section id="home" className="section">
         <div className="glass-card home-card curvy-huge" data-aos="zoom-out" data-aos-duration="2000">
             
@@ -163,7 +163,7 @@ export default function App() {
         </div>
     </section>
 
-    <!-- Mehendi Section -->
+    
     <section id="mehendi" className="section">
         <img src="temp\download (8).jpeg" className="side-polaroid left-polaroid" data-aos="fade-right" alt="mehendi inspo" />
         <div className="glass-card curvy-large theme-sage" data-aos="fade-up" data-aos-duration="1500">
@@ -209,7 +209,7 @@ export default function App() {
         </div>
     </section>
 
-    <!-- Arisina Section -->
+    
     <section id="arisina" className="section">
         <img src="temp/download (9).jpeg" className="side-polaroid right-polaroid" data-aos="fade-left" alt="haldi inspo" />
         <div className="glass-card curvy-large theme-butter" data-aos="fade-up" data-aos-duration="1500">
@@ -255,7 +255,7 @@ export default function App() {
         </div>
     </section>
 
-    <!-- Reception Section -->
+    
     <section id="reception" className="section">
         <img src="temp/download (11).jpeg" className="side-polaroid left-polaroid" data-aos="fade-right" alt="reception inspo" />
         <div className="glass-card curvy-large theme-apricot" data-aos="fade-up" data-aos-duration="1500">
@@ -301,7 +301,7 @@ export default function App() {
         </div>
     </section>
 
-    <!-- Muhurtha Section -->
+    
     <section id="muhurtha" className="section">
         <img src="temp/Telugu wedding mandap.jpeg" className="side-polaroid right-polaroid" data-aos="fade-left" alt="muhurtha inspo" />
         <div className="glass-card curvy-huge theme-muhurtha" data-aos="zoom-in" data-aos-duration="2000">
@@ -347,7 +347,7 @@ export default function App() {
         </div>
     </section>
 
-    <!-- Floating Contact Button -->
+    
     <a href="tel:8310246790" className="contact-floating">
         📞 8310246790
     </a>
