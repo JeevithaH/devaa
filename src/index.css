@@ -403,3 +403,30 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+
+/* Mobile Overlap Fixes */
+@media (max-width: 800px) {
+    .navbar {
+        width: 95%;
+        padding: 10px;
+        top: 10px;
+    }
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar a {
+        font-size: 0.9rem;
+    }
+    .lang-toggle {
+        top: 90px; /* Moves below the navbar so they don't overlap */
+        right: 15px;
+    }
+    .contact-floating {
+        bottom: 20px;
+        right: 15px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
