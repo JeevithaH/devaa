@@ -443,3 +443,6 @@ body {
 .qr-instruction { font-size: 0.75rem; margin-top: 5px; }
 .side-polaroid { max-width: 250px; }
 @media (max-width: 768px) { .section { padding-top: 80px; } .glass-card { max-height: 75vh; } }
+
+/* Center Calendar Button Fix */
+.calendar-btn { display: block; margin: 15px auto; width: fit-content; text-align: center; justify-content: center; align-items: center; }
