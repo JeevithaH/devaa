@@ -1,111 +1,405 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+    --rose-quartz: #F2C4CB;
+    --butter-yellow: #E8DD9E;
+    --sage-green: #8B9A6D;
+    --apricot-crush: #F3A987;
+    --dark-text: #2c2c2c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
+    background-color: #fcf9f2;
+    background-image: url('temp/floral-overlay.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    overflow-x: hidden;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+/* Removed grain overlay to keep it crystal clear */
+
+/* Pinterest Floating Decor (Maximalist) */
+.background-gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+@keyframes driftMotion {
+    0% { translate: 0px 0px; }
+    33% { translate: 15px -25px; }
+    66% { translate: -15px 20px; }
+    100% { translate: 0px 0px; }
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+.bg-img {
+    position: absolute;
+    border-radius: 40px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    opacity: 0.75;
+   
+    animation: driftMotion 10s ease-in-out infinite;
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+.float-1 { width: 300px; top: -50px; left: -50px; transform: rotate(-15deg); animation-duration: 12s; }
+.float-2 { width: 250px; bottom: 10%; right: -20px; transform: rotate(10deg); animation-duration: 15s; animation-direction: reverse; }
+.float-3 { width: 400px; top: 40%; left: -100px; transform: rotate(5deg); opacity: 0.5; animation-duration: 18s; }
+.float-4 { width: 350px; top: 10%; right: -50px; transform: rotate(-5deg); animation-duration: 14s; }
+.float-5 { width: 500px; bottom: -100px; left: 20%; transform: rotate(-8deg); opacity: 0.5; animation-duration: 20s; animation-direction: reverse; }
+
+/* Typography */
+.font-display { font-family: 'Italiana', serif; }
+.font-script { font-family: 'Pinyon Script', cursive; }
+.dramatic-text {
+    font-size: 6rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
 }
-p {
-  margin: 0;
+.ampersand { font-size: 7rem; color: var(--rose-quartz); }
+
+/* Draggable Stickers */
+.sticker {
+    position: absolute;
+    cursor: grab;
+    z-index: 9999;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+    transition: transform 0.2s;
+}
+.sticker:active { cursor: grabbing; transform: scale(1.1); }
+.sticker-1 { top: 15%; left: 75%; }
+.sticker-2 { top: 40%; left: 10%; }
+
+/* Curves & Glassmorphism */
+.curvy-pill { border-radius: 50px; }
+.curvy-medium { border-radius: 30px; }
+.curvy-large { border-radius: 60px; }
+.curvy-huge { border-radius: 100px; }
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 60px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* Home Card Specific adjustments to make video visible on load */
+.home-card {
+    padding: 25px; /* Less padding so video fits screen better */
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+/* Sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 100px 20px;
+}
+
+/* Side Polaroids for Pinterest layout */
+.side-polaroid {
+    position: absolute;
+    width: 280px;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 10px solid white;
+    z-index: 5;
+}
+.left-polaroid { left: 5%; transform: rotate(-8deg); }
+.right-polaroid { right: 5%; transform: rotate(12deg); }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    padding: 15px 40px;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.navbar a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.navbar a:hover { color: var(--apricot-crush); }
+
+/* Themes for cards */
+.theme-sage { background: rgba(139, 154, 109, 0.2); border-color: var(--sage-green); }
+.theme-butter { background: rgba(232, 221, 158, 0.3); border-color: var(--butter-yellow); }
+.theme-apricot { background: rgba(243, 169, 135, 0.2); border-color: var(--apricot-crush); }
+.theme-muhurtha { background: rgba(242, 196, 203, 0.4); border-color: var(--rose-quartz); border-width: 3px; }
+
+.section-title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+/* Updated Date Text for high visibility */
+.date-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #903c00; /* Darker burnt orange for better contrast */
+    background: rgba(255, 255, 255, 0.5); /* Slight highlight */
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+.details p { margin: 10px 0; font-size: 1.2rem; font-weight: 600; }
+
+/* Video with Title Overlay */
+.polaroid-video {
+    margin-top: 15px; 
+    border: 12px solid rgba(255,255,255,0.8);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    max-height: 70vh;
+}
+.polaroid-video.has-overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.polaroid-video video { 
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+    filter: brightness(0.85); 
+}
+.video-overlay {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    pointer-events: none; /* Let video clicks pass through */
+    z-index: 10;
+}
+.video-overlay .dramatic-text {
+    color: #ffffff;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.8);
+    margin: 0;
+}
+.video-overlay .subtitle {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    font-weight: 600;
+}
+.video-overlay .ampersand {
+    color: var(--butter-yellow);
+    text-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.instruction-text { font-family: 'Playfair Display', serif; font-style: italic; color: #888; margin-top:15px;}
+
+/* QR Code Location */
+.qr-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    display: inline-block;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.qr-code {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.qr-instruction {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .dramatic-text { font-size: 4rem; }
+    .side-polaroid { display: none; }
+    .navbar ul { gap: 15px; }
+    .navbar a { font-size: 0.9rem; }
+    .glass-card { padding: 40px 20px; }
+    .video-overlay .dramatic-text { font-size: 3.5rem; }
+}
+
+/* Language Toggle Button */
+.lang-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 5px;
+}
+.lang-toggle button {
+    border: none;
+    background: transparent;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--dark-text);
+}
+.lang-toggle button.active {
+    background: var(--rose-quartz);
+    color: white;
+}
+
+/* Hide Kannada by default */
+.lang.kn {
+    display: none;
+    font-family: 'Noto Sans Kannada', sans-serif;
+}
+.kannada-title {
+    font-size: 4rem;
+}
+
+/* Quotes Styling */
+.quote {
+    font-family: 'Italiana', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--dark-text);
+    margin: 10px auto 25px auto;
+    line-height: 1.5;
+    padding: 15px 0;
+    max-width: 80%;
+    position: relative;
+}
+.quote::before, .quote::after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.15);
+}
+.quote::before {
+    top: 0;
+}
+.quote::after {
+    bottom: 0;
+}
+.quote .lang.kn {
+    font-style: normal;
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* Home subtitle adjustments */
+.video-overlay .subtitle {
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+.video-overlay .subtitle .lang.kn {
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+/* Calendar Button Styling */
+.calendar-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 10px 25px;
+    background: var(--rose-quartz);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(242, 196, 203, 0.4);
+}
+.calendar-btn:hover {
+    background: var(--dark-text);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.calendar-btn .lang.kn {
+    font-family: 'Noto Sans Kannada', sans-serif;
+    font-weight: 400;
+}
+
+/* Make QR code link interactive */
+.qr-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.qr-link:hover {
+    transform: scale(1.05);
+}
+
+/* Floating Contact Button */
+.contact-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: var(--dark-text);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.contact-floating:hover {
+    background: var(--rose-quartz);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
